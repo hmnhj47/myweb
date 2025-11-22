@@ -1,15 +1,208 @@
-body { margin:0; font-family:"Microsoft YaHei",sans-serif; background:#f5f5f5; }
-.header { background:#333; color:#fff; padding:10px 20px; }
-.nav-container { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; }
-.logo { font-size:24px; font-weight:bold; }
-.nav-links a { color:#fff; margin-left:20px; text-decoration:none; }
-.nav-links a:hover { text-decoration:underline; }
-.search-box input { padding:5px; border-radius:3px; border:none; }
-.search-box button { padding:5px 10px; margin-left:5px; border:none; border-radius:3px; cursor:pointer; }
-.banner img { width:100%; height:auto; }
-.products-section { display:flex; flex-wrap:wrap; gap:20px; padding:20px; justify-content:center; }
-.product-card { background:#fff; padding:10px; border-radius:8px; width:220px; text-align:center; box-shadow:0 0 5px rgba(0,0,0,0.1); }
-.product-card img { width:100%; border-radius:5px; }
-.product-name { font-weight:bold; margin:10px 0 5px; }
-.product-price { color:#ff4d4f; font-size:16px; margin-bottom:10px; }
-.footer { text-align:center; padding:20px; background:#333; color:#fff; }
+/* -------------- 通用样式 -------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 页面背景色、字体 */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f5f5f5;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* 链接和按钮的默认样式 */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+/* 设置所有元素的字体大小和间距 */
+h1, h2, h3 {
+  margin: 0;
+  font-family: "Microsoft YaHei", sans-serif;
+}
+
+/* -------------- 导航栏样式 -------------- */
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+  padding: 5px 0;
+}
+
+.nav-links a:hover {
+  border-bottom: 2px solid #ff4d4f;
+}
+
+/* 搜索框样式 */
+.search-box {
+  display: flex;
+  align-items: center;
+}
+
+.search-box input {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.search-box button {
+  padding: 5px 10px;
+  margin-left: 5px;
+  border: 1px solid #ddd;
+  background-color: #ff4d4f;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-box button:hover {
+  background-color: #e04343;
+}
+
+/* -------------- Banner 区域 -------------- */
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* -------------- 产品区块样式 -------------- */
+.products-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.product-card {
+  background-color: #fff;
+  width: 250px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.product-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.product-price {
+  color: #ff4d4f;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.product-card button {
+  background-color: #ff4d4f;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.product-card button:hover {
+  background-color: #e04343;
+}
+
+/* -------------- 页脚样式 -------------- */
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer a {
+  color: #ff4d4f;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* -------------- 响应式设计 -------------- */
+/* 屏幕宽度小于 768px 时，修改布局 */
+@media (max-width: 768px) {
+  .products-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-card {
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 20px;
+  }
+
+  .header {
+    text-align: center;
+  }
+
+  .nav-links {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .search-box {
+    margin-top: 10px;
+  }
+}
+
+/* 屏幕宽度小于 480px 时，进一步优化 */
+@media (max-width: 480px) {
+  .product-name {
+    font-size: 16px;
+  }
+
+  .product-price {
+    font-size: 14px;
+  }
+
+  .footer {
+    font-size: 14px;
+  }
+}
+
+
