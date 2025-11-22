@@ -1,0 +1,15 @@
+body { margin:0; font-family:"Microsoft YaHei",sans-serif; background:#f5f5f5; }
+.header { background:#333; color:#fff; padding:10px 20px; }
+.nav-container { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; }
+.logo { font-size:24px; font-weight:bold; }
+.nav-links a { color:#fff; margin-left:20px; text-decoration:none; }
+.nav-links a:hover { text-decoration:underline; }
+.search-box input { padding:5px; border-radius:3px; border:none; }
+.search-box button { padding:5px 10px; margin-left:5px; border:none; border-radius:3px; cursor:pointer; }
+.banner img { width:100%; height:auto; }
+.products-section { display:flex; flex-wrap:wrap; gap:20px; padding:20px; justify-content:center; }
+.product-card { background:#fff; padding:10px; border-radius:8px; width:220px; text-align:center; box-shadow:0 0 5px rgba(0,0,0,0.1); }
+.product-card img { width:100%; border-radius:5px; }
+.product-name { font-weight:bold; margin:10px 0 5px; }
+.product-price { color:#ff4d4f; font-size:16px; margin-bottom:10px; }
+.footer { text-align:center; padding:20px; background:#333; color:#fff; }
